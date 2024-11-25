@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Okfee</title>
+	  
+<style>
+    
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f5e4;
+        color: #000;
+    }
+
+    header {
+        background-color: #4B5934;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    header nav a:hover {
+        text-decoration: underline;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product {
+        width: 150px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .product:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .ubicaciones {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .ubicaciones h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .ubicaciones-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .ubicacion {
+        background-color: #fff9f6;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 280px;
+        text-align: center;
+    }
+
+    .ubicacion img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    .boton {
+        background-color: #4B5934;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .boton:hover {
+        background-color: #3b4729;
+    }
+
+    .boton-secundario {
+        background-color: white;
+        color: #4B5934;
+        border: 2px solid #4B5934;
+    }
+
+    .boton-secundario:hover {
+        background-color: #4B5934;
+        color: white;
+    }
+
+    
+    .merch-section {
+        text-align: center;
+        padding: 20px;
+        background-color: #f1f5e4;
+    }
+
+    .merch-title {
+        font-size: 2rem;
+        color: #4B5934;
+        margin-bottom: 20px;
+    }
+
+    .merch-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .merch-item {
+        width: 200px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .merch-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .merch-item img:hover {
+        transform: scale(1.1);
+    }
+
+    .merch-caption {
+        margin-top: 10px;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .follow-us {
+        margin-top: 30px;
+        font-size: 1.2em;
+        color: #4B5934;
+    }
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f5e4;
+        color: #000;
+    }
+
+    header {
+        background-color: #4B5934;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    header nav a:hover {
+        text-decoration: underline;
+    }
+
+    
+    .registro {
+        background-color: #4B5934;
+        color: white;
+        text-align: center;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 500px;
+        margin: 50px auto; 
+    }
+
+    .registro h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #f1f5e4;
+    }
+
+    .registro label {
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .registro input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px #1D1D1D;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+
+    .registro button {
+        background-color: #1D1D1D;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .registro button:hover {
+        background-color: #4B5934;
+    }
+    
+    @media (max-width: 768px) {
+        .product, .ubicacion, .merch-item {
+            width: 100%;
+        }
+
+        header nav a {
+            font-size: 12px;
+        }
+
+        .ubicaciones h1, .merch-title {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+   
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="Okfeeweb.html">Inicio</a>
+            <a href="#Ubicaciones">Ubicaciones</a>
+            <a href="Menuokfee.html">Menú</a>
+            <a href="#Productos">Productos</a>
+        </nav>
+    </header>
+
+    <div class="logo">
+        <img src="OKFEE LOGO PNGG.png" alt="Logo Okfee">
+    </div>
+
+    <div class="products">
+        <div class="product"><img src="Matcha Okfee.png" alt="Matcha"></div>
+        <div class="product"><img src="Latt.png" alt="Latte"></div>
+        <div class="product"><img src="Sandwich Okfee.png" alt="Sandwich"></div>
+        <div class="product"><img src="vaso.png" alt="Vaso"></div>
+        <div class="product"><img src="Porta vasos Okfee.png" alt="Porta vasos"></div>
+    </div>
+
+    <section class="ubicaciones" id="Ubicaciones">
+        <h1>Ubicaciones</h1>
+        <div class="ubicaciones-container">
+            <div class="ubicacion">
+                <img src="Ubicacion 1.png" alt="Ubicación Condesa">
+                <h2>Col. Condesa</h2>
+                <p>Tamaulipas 60<br>Lunes a sábado de 9 am a 8 pm<br>Domingo de 10 am a 6 pm</p>
+                <a href="Menuokfee.html" class="boton">Ver menú</a>
+               <a href="https://maps.app.goo.gl/mRbGX3Df4LhbEzKM9" class="boton boton-secundario" target="_blank">Cómo llegar 📍</a>
+            </div>
+            <div class="ubicacion">
+                <img src="Ubicacion 2.png" alt="Ubicación Roma Nte">
+                <h2>Roma Nte</h2>
+                <p>Jalapa 99-A<br>Lunes a sábado de 10 am a 9 pm<br>Domingo de 12 pm a 8 pm</p>
+                <a href="Menuokfee.html" class="boton">Ver menú</a>
+                <a href="https://maps.app.goo.gl/tjPxJaAtFDxsobSZ7" class="boton boton-secundario" target="_blank">Cómo llegar 📍</a>
+            </div>
+        </div>
+    </section>
+
+    <img src="Okfee espacio.png" alt="Espacio Okfee" style="max-width: 100%; height: auto;">
+
+    <section class="merch-section" id="Productos">
+        <h1 class="merch-title">Merch</h1>
+        <div class="merch-container">
+            <div class="merch-item"><img src="Playera.jpg" alt="Playera"><p class="merch-caption">T-shirt</p></div>
+            <div class="merch-item"><img src="Tote.jpg" alt="Tote Bag"><p class="merch-caption">Tote Bag</p></div>
+            <div class="merch-item"><img src="Taza.jpg" alt="Taza"><p class="merch-caption">Taza Okfee</p></div>
+            <div class="merch-item"><img src="Sudadera.jpg" alt="Sudadera"><p class="merch-caption">Hoodie</p></div>
+            <div class="merch-item"><img src="Funda.jpg" alt="Funda"><p class="merch-caption">Case</p></div>
+        </div>
+        <p class="follow-us">síguenos @okkfee</p>
+    </section>
+	
+	<section class="registro">
+        <h2>¡Únete a nuestra lista para recibir noticias y descuentos!</h2>
+        <form action="URL_DEL_SERVIDOR" method="POST">
+            <label for="email">Ingresa tu correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Unirme</button>
+        </form>
+    </section> 
+	
+</body>
+</html>
